@@ -66,7 +66,7 @@ const Navbar = () => {
                  <Input />
                   <Search style={{color: "grey", fontSize:16}}/>
                   </SearchContainer></Left>
-              <Center><Logo>MERN</Logo></Center>
+              <Center><Logo>MERN store</Logo></Center>
               <Right>
 <MenuItem>REGISTER</MenuItem>
 <MenuItem>SIGN IN</MenuItem>
