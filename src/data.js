@@ -5,8 +5,6 @@ import punk from "../src/images/punk.jpg";
 import shrine from "../src/images/shrine.jpg";
 import bunny from "../src/images/bunny.jpg";
 import sealtram from "../src/images/sealtram.jpg";
-import train from "../src/images/train.jpg";
-import goat from "../src/images/goat.jpg";
 import owl from "../src/images/owl.jpg";
 import me from "../src/images/mestairs.jpg";
 import mushroom from "../src/images/mushroom.jpg";
@@ -58,16 +56,6 @@ export const categories = [
     id: 4,
     img: sealtram,
     title: "FUN TIMES!",
-  },
-  {
-    id: 5,
-    img: train,
-    title: "TRANSPORT",
-  },
-  {
-    id: 6,
-    img: goat,
-    title: "YUMMY FRIENDS",
   },
 ];
 
