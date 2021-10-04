@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { mobile } from "../responsive"
 
 const Container = styled.div`
-height: 60vh;
+height: 40vh;
 background-color: aliceblue;
 display: flex;
 flex-direction: column;
@@ -15,6 +15,7 @@ justify-content: center;
 const Title = styled.h1`
 font-size: 70px;
 margin-bottom: 20px;
+${mobile({ fontSize: "60px" })}
 `
 
 

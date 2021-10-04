@@ -10,11 +10,11 @@ const Info = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.2);
-    z-index: 3;
+    background-color: #f3d6d6a6;
+    z-index: 2;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     transition: all .5s ease;
     cursor: pointer;
 `
@@ -34,8 +34,6 @@ const Container = styled.div`
     }
 `
 
-
-
 const Circle = styled.div`
     width: 200px;
     height: 200px;
@@ -45,7 +43,7 @@ const Circle = styled.div`
 `
 
 const Image = styled.img`
-    height: 75%;
+    height: 85%;
     z-index: 2;
 `
 
@@ -57,7 +55,7 @@ const Icon = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    margin: 10px 10px;
 
     &:hover{
         background-color: aliceblue;

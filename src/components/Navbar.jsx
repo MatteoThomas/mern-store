@@ -19,17 +19,19 @@ ${mobile({ padding: "10px 0px "})}
 const Left = styled.div`
 flex:1;
 display: flex;
-align-items: center;`
+align-items: center;
+`
 
 const Language = styled.span`
 font-size:14px;
 cursor: pointer;
 ${mobile({ display: "none "})}
-`;
+`
 
 const SearchContainer = styled.div`
 border: 1px solid lightgrey;
 display: flex;
+justify-content: space-space-around;
 align-items: center;
 margin-left: 25px;
 padding: 5px;
@@ -43,11 +45,13 @@ ${mobile({ width: "50px"})}
 const Center = styled.div`
 flex:1;
 text-align: center;
+justify-content: center;
 `
 
 const Logo = styled.h1`
-font-size: bold;
-${mobile({ fontSize: "24px"})}
+font-size: 40px;
+font-weight: 800;
+${mobile({ fontSize: "24px", paddingLeft: "25px"})}
 `
 
 const Right = styled.div`
@@ -79,7 +83,7 @@ const Navbar = () => {
 <MenuItem>REGISTER</MenuItem>
 <MenuItem>SIGN IN</MenuItem>
 <MenuItem>
-<Badge badgeContent={1} color="primary">
+<Badge badgeContent={2} color="primary">
     <ShoppingCartOutlined/>
 </Badge>
 </MenuItem>

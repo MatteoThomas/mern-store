@@ -16,22 +16,22 @@ export const sliderItems = [
   {
     id: 1,
     img: kc,
-    title: "SUMMER SALE",
-    desc: "DON'T COMPROMISE ON THIS SALE! GET 30% OFF NEW ITEMS!",
+    title: "AKIHABARA",
+    desc: "Video games, dolls, electronics",
     bg: "c2bacd",
   },
   {
     id: 2,
     img: mirror,
-    title: "WINTER SALE",
-    desc: "CHECK THESE COLD WEATHER FAVORITES!",
+    title: "LAKE ASHI / HAKONE",
+    desc: "Hiking, History, Heaven",
     bg: "f3cacd",
   },
   {
     id: 3,
     img: house,
-    title: "POPULAR",
-    desc: "CHECK OUT OUR BEST SELLERS NOW!",
+    title: "ABOVE THE CAFE",
+    desc: "Wake up and you're there!",
     bg: "A3cabd",
   },
 ];

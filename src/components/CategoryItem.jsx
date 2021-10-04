@@ -34,10 +34,16 @@ text-shadow: 1px 1px 1px grey;
 
 const Button = styled.button`
 border: none;
+border-radius: 5%;
 padding: 10px;
 background-color: white;
 color: grey;
 font-weight: 600;
+
+&:hover{
+        transform: scale(1.1);
+        transition: all .5s ease;
+    }
 `
 
 const CategoryItem = ({item}) => {

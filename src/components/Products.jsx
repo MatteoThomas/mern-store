@@ -8,7 +8,7 @@ padding:20px;
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
-${mobile({ padding: "10px"})}
+${mobile({ padding: "0px"})}
 `
 
 const Products = () => {
