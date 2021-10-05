@@ -40,22 +40,26 @@ export const categories = [
   {
     id: 1,
     img: punk,
-    title: "PUNK STYLE!",
+    title: "Accessories",
+    cat: "accessories",
   },
   {
     id: 2,
     img: shrine,
-    title: "WORSHIP THE EARTH!",
+    title: "DRESSED UP",
+    cat: "dress",
   },
   {
     id: 3,
     img: bunny,
-    title: "EATING HAPPINES",
+    title: "KEEP IT CASUAL",
+    cat: "casual",
   },
   {
     id: 4,
     img: sealtram,
-    title: "FUN TIMES!",
+    title: "SPORTY",
+    cat: "sporty",
   },
 ];
 
