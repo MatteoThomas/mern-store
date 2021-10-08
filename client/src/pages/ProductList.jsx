@@ -58,7 +58,7 @@ const ProductList = () => {
     <Container>
         <Navbar/>
         <Announcement/>
-        <Title>Products</Title>
+        <Title>{cat}</Title>
         <FilterContainer>
         <Filter><FilterText>Filter Products:</FilterText>
         <Select name="color" onChange={handleFilters}>
@@ -84,7 +84,7 @@ const ProductList = () => {
         </Select>
         </Filter>
         <Filter><FilterText>Sort Products:</FilterText>
-        <Select onChange={e=> setSort(e.target.value)}>
+        <Select onChange={(e)=> setSort(e.target.value)}>
         <Option value="newest">
             Newest
         </Option>

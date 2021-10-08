@@ -88,7 +88,7 @@ router.get("/income", verifyTokenAndAdmin, async (req, res) => {
     ]);
     res.status(200).json(income);
   } catch (err) {
-    status(500).json(err);
+    res.status(500).json(err);
   }
 });
 

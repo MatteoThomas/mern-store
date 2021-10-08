@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
+import Success from "./pages/Success";
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 
@@ -16,14 +17,17 @@ const App = () => {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/products">
+      <Route path="/products/:category">
       <ProductList />
     </Route>
-    <Route path="/product">
+    <Route path="/product/:id">
       <Product />
     </Route>
     <Route path="/cart">
-      <Cart />
+          <Cart />
+        </Route>
+        <Route path="/success">
+          <Success />
     </Route>
     <Route path="/login">
     {user ? <Redirect to="/"/> : <Login/>}
