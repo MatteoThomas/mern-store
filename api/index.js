@@ -13,7 +13,7 @@ const stripeRoute = require("./routes/stripe");
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("ecommerce DB Connection Access"))
   .catch((err) => {
     console.log(err);
