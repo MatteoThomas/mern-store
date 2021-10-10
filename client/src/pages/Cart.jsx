@@ -13,8 +13,6 @@ import { useHistory } from 'react-router'
 
 const KEY = process.env.REACT_APP_STRIPE_KEY;
 
-console.log(KEY)
-
 const Container = styled.div`
 
 `

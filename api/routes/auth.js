@@ -3,14 +3,14 @@ const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
 
-//REGISTER NEW USER
+//REGISTER
 router.post("/register", async (req, res) => {
   const newUser = new User({
     username: req.body.username,
     email: req.body.email,
     password: CryptoJS.AES.encrypt(
       req.body.password,
-      process.env.PASSPHRASE
+      process.env.PASS_SEC
     ).toString(),
   });
 
@@ -27,37 +27,29 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
+    !user && res.status(401).json("Wrong credentials!");
 
-    // IF USER IS'NT FOUND ERROR MESSAGE
-    !user && res.status(401).json("Wrong credentials USER");
-
-    // DECRYPT PASSWORD
     const hashedPassword = CryptoJS.AES.decrypt(
       user.password,
-      process.env.PASSPHRASE
+      process.env.PASS_SEC
     );
+    const OriginalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
 
-    // DECRYPTED PASSWORD TO STRING
-    const originalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
+    OriginalPassword !== req.body.password &&
+      res.status(401).json("Wrong credentials!");
 
-    // IF PASSWORD DOES'NT MATCH ERROR MESSAGE
-    originalPassword !== req.body.password &&
-      res.status(401).json("Wrong credentials PW");
-
-    //JWT AUTH
     const accessToken = jwt.sign(
       {
         id: user._id,
         isAdmin: user.isAdmin,
       },
-      process.env.JWT_KEY,
-      { expiresIn: "1d" }
+      process.env.JWT_SEC,
+      { expiresIn: "3d" }
     );
 
-    // RETURNS DESTRUCTURED USER INFORMATION EXCEPT PASSWORD
     const { password, ...others } = user._doc;
 
-    res.status(200).json({ others, accessToken });
+    res.status(200).json({ ...others, accessToken });
   } catch (err) {
     res.status(500).json(err);
   }

@@ -5,7 +5,7 @@ const verifyToken = (req, res, next) => {
   if (authHeader) {
     // SPLITS BEARER FROM HEADER
     const token = authHeader.split(" ")[1];
-    jwt.verify(token, process.env.JWT_KEY, (err, user) => {
+    jwt.verify(token, process.env.JWT_SEC, (err, user) => {
       if (err) return res.status(403).json("Token invalid");
       req.user = user;
       next();
