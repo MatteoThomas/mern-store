@@ -25,8 +25,7 @@ mongoose
 app.use(
   cors({
     // origin: "http://localhost:5000",
-    origin: "https://ecomm-store-mern.herokuapp.com/",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    origin: "https://ecomm-store-mern.herokuapp.com/api/",
   })
 );
 app.use(express.json());
