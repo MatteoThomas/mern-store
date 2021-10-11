@@ -2,9 +2,6 @@
   "name": "mern-store",
   "version": "1.0.0",
   "description": "",
-  "engines": {
-    "node": "14.17"
-  },
   "main": "index.js",
   "dependencies": {
     "cors": "^2.8.5",
@@ -17,8 +14,11 @@
     "stripe": "^8.178.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && run build"
+    "start": "node index.js ",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "engines": {
+    "node": "14.17.0"
   },
   "keywords": [],
   "author": "",
